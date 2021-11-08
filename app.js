@@ -29,7 +29,7 @@ const allMiddleWar = [express.static('public'),
 	/*tinyLogger,*/
 	express.json(),
 	cors({
-		origin: ['http://localhost:8159', 'http://localhost:8080', 'http://localhost:3000','https://joyroy-bd.github.io'],
+		origin: ['https://phone-recharge-4249f.firebaseapp.com', 'http://localhost:8080', 'http://localhost:3000','https://joyroy-bd.github.io'],
 		credentials: true
 	})
 ];
