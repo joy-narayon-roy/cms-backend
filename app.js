@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes/allRoutes.js");
 const cors = require("cors");
-const serverAccess = require("./data.json");
+
 
 const app = express();
 
@@ -20,18 +20,13 @@ app.use(
 );
 
 //My middle war start
-function tinyLogger(req, res, next) {
-  console.log(`${req.method} - ${req.url}`);
-  next();
-}
-console.log(serverAccess.origin);
+
 //Use middlewar
 const allMiddleWar = [
   express.static("public"),
-  /*tinyLogger,*/
   express.json(),
   cors({
-    origin: serverAccess.origin,
+    origin: process.env.ACCESS_DOMAIN.split(' '),
     credentials: true,
   }),
 ];
