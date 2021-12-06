@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes/allRoutes.js");
 const cors = require("cors");
 
-
 const app = express();
 
 //Use Database start
@@ -22,11 +21,19 @@ app.use(
 //My middle war start
 
 //Use middlewar
+const accessDomain = [
+  "https://phone-recharge-4249f.firebaseapp.com",
+  "http://localhost:8080",
+  "http://localhost:3000",
+  "https://joyroy-bd.github.io",
+  "https://njo-ra.web.app",
+];
+
 const allMiddleWar = [
   express.static("public"),
   express.json(),
   cors({
-    origin: process.env.ACCESS_DOMAIN.split(' '),
+    origin: accessDomain,
     credentials: true,
   }),
 ];
