@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 //Use Database start
-const DB_LINK = `mongodb+srv://MyDataBase1:${process.env.DB_PASSWORD}@cluster0.yiali.mongodb.net/rechargeData21?retryWrites=true&w=majority`;
+const DB_LINK = `mongodb+srv://MyDataBase1:${process.env.DB_PASSWORD}@cluster0.yiali.mongodb.net/rechargeData22?retryWrites=true&w=majority`;
 
 //Import Router
 
