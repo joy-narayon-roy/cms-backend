@@ -13,6 +13,3 @@ https://github.com/joyroy-bd/cms-backend.git
 
 ***For Use Firebase Realtime database***
 
-```bash 
-https://cms-app-67a7b-default-rtdb.firebaseio.com/rechargeData.json
-```
